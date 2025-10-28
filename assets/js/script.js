@@ -70,7 +70,6 @@ else if (nota >= 7 && nota <= 10) {
 }
 
 //ATIVIDADE 4 - Laços de Repetição
-
 //4.1
 
 for (let x = 1; x<=10; x++){
@@ -95,16 +94,118 @@ while (senha !== "1234") {
 alert("Acesso Permitido:)");
 
 //ATIVIDADE 5 - Funções
-
 //5.1
 
 let num1 = Number(prompt("Digite o Primeiro número:"));
 let num2 = Number(prompt("Digite o Segundo número:"));
 
-let resul (num1,num2){
-
-} 
-function soma(num1, num2) {
-    return num1 + num2;
+function somanum(num1,num2){
+    let resu = num1 + num2;
+    return resu;
 }
 
+console.log("O resultado é,",somanum(num1,num2));
+
+//5.2
+
+let nom = prompt("Digite seu nome:")
+console.log("Olá,",nom,"!!");
+
+//5.3
+
+function calcumed(not1,not2,not3){
+let som = Number(not1) + Number(not2) + Number(not3);
+let tot = som / 3;
+return tot;
+}
+
+let not1 = Number(prompt("Digite a 1° nota:"));
+let not2 = Number(prompt("Digite 2° nota:"));
+let not3 = Number(prompt("Digite 3° nota:"));
+
+let med = calcumed(not1,not2,not3);
+console.log("A média dos números é:",med,);
+
+//ATIVIDADE 6 - Arrays
+//6.1
+
+let nomes = ["Amanda", "Luane", "Keilana", "Camilly", "Janaina"];
+    console.log("Primeiro nome:",nomes[0]);
+    console.log("Último nome:",nomes[nomes.length - 1]);
+
+//6.2
+
+nomes.push("Eduarda");
+console.log("Lista de nomes atualizada:",nomes);
+
+//6.3
+
+for (let i = 0; i < nomes.length; i++){
+    console.log(`Nome ${i + 1}: ${nomes[i]}`);
+}
+
+//ATIVIDADE 7 - Objetos
+//7.1
+
+let carro = {
+    marca: "Ford ",
+    modelo: "Territory",
+    ano: 2026
+};
+
+console.log(carro.marca);
+console.log(carro.modelo);
+console.log(carro.ano);
+
+console.log(carro);
+console.log(`O carro é um ${carro.marca} ${carro.modelo}, ano ${carro.ano}`);
+
+//7.2
+
+let Aluno = {
+    nome: "Amanda ",
+    idade: "17",
+    notas: [10,10,10]
+};
+
+let media = (Aluno.notas[0] + Aluno.notas[1] + Aluno.notas[2]) / Aluno.notas.length;
+console.log(`Aluno:${Aluno.nome}`);
+console.log(`Média:${media}`);
+
+//7.3
+
+let produtos = [
+   { nome: "Batom", preco: 15 },
+   { nome: "Esmalte", preco: 5 },
+   { nome: "Gloss", preco: 10 }
+];
+
+for (let i = 0; i < produtos.length; i++){
+    console.log(`Produto: ${produtos[i].nome} - Preço:R$${produtos[i].preco}`);
+}
+
+//ATIVIDADE 8 - Eventos DOM
+//8.1
+
+//8.2
+
+//8.3
+
+//ATIVIDADE 9 - Manipulação de Strings
+//9.1
+
+nome = prompt("Digite seu nome:");
+console.log(`Seu nome tem ${nome.length} letras.`);
+
+//9.2
+
+frase = prompt("Digite uma frase:");
+console.log(frase.toUpperCase());
+
+//9.3
+
+texto = prompt("Digite um texto:");
+console.log(texto.substring(0,5));
+
+//ATIVIDADE 10 - Promises e Fetch API
+//10.1
