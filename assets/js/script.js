@@ -184,13 +184,6 @@ for (let i = 0; i < produtos.length; i++){
     console.log(`Produto: ${produtos[i].nome} - Preço:R$${produtos[i].preco}`);
 }
 
-//ATIVIDADE 8 - Eventos DOM
-//8.1
-
-//8.2
-
-//8.3
-
 //ATIVIDADE 9 - Manipulação de Strings
 //9.1
 
@@ -209,3 +202,37 @@ console.log(texto.substring(0,5));
 
 //ATIVIDADE 10 - Promises e Fetch API/
 //10.1
+
+const minhaPromise = new Promise((resolve) => {
+  setTimeout(() => {
+    resolve("Concluído!");
+  }, 3000); // 3 segundos
+});
+
+minhaPromise.then((mensagem) => {
+  console.log(mensagem);
+});
+
+//10.2
+
+fetch("https://jsonplaceholder.typicode.com/todos/1")
+  .then((resposta) => resposta.json())
+  .then((dados) => {
+    console.log(dados);
+  })
+  .catch((erro) => {
+    console.error("Erro ao buscar dados:", erro);
+  });
+  
+//10.3
+
+fetch("https://jsonplaceholder.typicode.com/posts")
+  .then((resposta) => resposta.json())
+  .then((posts) => {
+    posts.forEach((post) => {
+      console.log(post.title);
+    });
+  })
+  .catch((erro) => {
+    console.error("Erro ao buscar posts:", erro);
+  });
