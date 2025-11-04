@@ -207,5 +207,5 @@ console.log(frase.toUpperCase());
 texto = prompt("Digite um texto:");
 console.log(texto.substring(0,5));
 
-//ATIVIDADE 10 - Promises e Fetch API
+//ATIVIDADE 10 - Promises e Fetch API/
 //10.1
