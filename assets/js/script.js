@@ -183,6 +183,39 @@ let produtos = [
 for (let i = 0; i < produtos.length; i++){
     console.log(`Produto: ${produtos[i].nome} - Preço:R$${produtos[i].preco}`);
 }
+      
+//Atividade08
+
+  //Exer01
+
+    // Exer01 – Mudar cor
+const botao = document.getElementById("bot");
+const cores = ["red", "blue", "green", "pink", "orange", "purple", "yellow"];
+
+botao.addEventListener("click", function() {
+  const corAleatoria = cores[Math.floor(Math.random() * cores.length)];
+  document.body.style.backgroundColor = corAleatoria;
+});
+
+// Exer02 – Mostrar texto
+const input = document.getElementById("inpuu");
+const botaun = document.getElementById("botu");
+
+botaun.addEventListener("click", function() {
+  const textoDigitado = input.value;
+  console.log("Você digitou:", textoDigitado);
+  input.value = "";
+});
+
+// Exer03 – Contar cliques
+const bota = document.getElementById("botcon");
+const contatex = document.getElementById("contador");
+
+let contador = 0;
+bota.addEventListener("click", function() {
+  contador++;
+  contatex.textContent = "Números de Cliques: " + contador;
+});
 
 //ATIVIDADE 9 - Manipulação de Strings
 //9.1
